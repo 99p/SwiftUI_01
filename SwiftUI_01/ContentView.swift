@@ -8,9 +8,46 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var ans = 0
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack{
+            if ans == 0{
+                Text("Junken Now!!")
+                    .padding(.bottom)
+            } else if ans == 1 {
+                Image("gu")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                Text("Gu")
+            } else if ans == 2 {
+                Image("choki")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                Text("Choki")
+            } else if ans == 3 {
+                Image("pa")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                Text("Pa")
+            }
+            
+            Button(action: {
+                var newAns = 0
+                repeat {
+                    newAns = Int.random(in: 1...3)
+                } while ans == newAns
+                
+                ans = newAns
+            }) {
+                Text("Let's Play Janken.")
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 100)
+                    .font(.title)
+                    .background(Color.pink)
+                    .foregroundColor(Color.white)
+            }
+        }
     }
 }
 
