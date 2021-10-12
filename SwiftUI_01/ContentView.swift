@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         VStack{
             if ans == 0{
-                Text("Junken Now!!")
+                Text("Let's Janken")
                     .padding(.bottom)
             } else if ans == 1 {
                 Image("gu")
@@ -54,5 +54,10 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
+            .previewDevice("iPhone 12 mini")
+//        ContentView()
+//            .preferredColorScheme(.dark)
+//            .previewDevice("iPad Pro (9.7-inch)")
     }
 }
