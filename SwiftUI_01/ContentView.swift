@@ -12,6 +12,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack{
+            Spacer()
             if ans == 0{
                 Text("Let's Janken")
                     .padding(.bottom)
@@ -19,16 +20,22 @@ struct ContentView: View {
                 Image("gu")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    .padding(.bottom)
+                Spacer()
                 Text("Gu")
             } else if ans == 2 {
                 Image("choki")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    .padding(.bottom)
+                Spacer()
                 Text("Choki")
             } else if ans == 3 {
                 Image("pa")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    .padding(.bottom)
+                Spacer()
                 Text("Pa")
             }
             
